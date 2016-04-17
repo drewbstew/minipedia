@@ -1,0 +1,52 @@
+/* line 14, ../../src/sass/style.sass */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 19, ../../src/sass/style.sass */
+html {
+  height: 100%;
+}
+
+/* line 22, ../../src/sass/style.sass */
+body {
+  height: inherit;
+}
+
+/* line 25, ../../src/sass/style.sass */
+.container {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 32, ../../src/sass/style.sass */
+.mid-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* line 36, ../../src/sass/style.sass */
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 41, ../../src/sass/style.sass */
+.topper {
+  padding-bottom: 30px;
+}
+
+/* line 44, ../../src/sass/style.sass */
+h1 {
+  font-family: "Asap", sans-serif;
+  font-size: 48px;
+}
+
+/* line 48, ../../src/sass/style.sass */
+h3 {
+  font-family: "Raleway", sans-serif;
+}
