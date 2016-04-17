@@ -5,10 +5,11 @@
 $searchButton = $ "#search-btn"
 $searchBox = $ "#search-box"
 $searchDiv = $ ".search"
+$rando = $ "#rando"
 
-setContainerHeight = () ->
-
-
+setRandoWidth = () ->
+  searchDivWidth = $searchDiv.width()
+  $rando.width(searchDivWidth)
 
 $ ->
-  setContainerHeight()
+  setRandoWidth()
