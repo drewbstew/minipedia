@@ -1,22 +1,14 @@
 (function() {
-  var $rando, $searchBox, $searchButton, $searchDiv, setRandoWidth;
+  var $rando, $searchBox, $searchButton, $searchDiv;
 
   $searchButton = $("#search-btn");
 
   $searchBox = $("#search-box");
 
-  $searchDiv = $(".search");
+  $searchDiv = $("#search-cont");
 
   $rando = $("#rando");
 
-  setRandoWidth = function() {
-    var searchDivWidth;
-    searchDivWidth = $searchDiv.width();
-    return $rando.width(searchDivWidth);
-  };
-
-  $(function() {
-    return setRandoWidth();
-  });
+  $(function() {});
 
 }).call(this);

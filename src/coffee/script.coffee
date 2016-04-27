@@ -4,12 +4,15 @@
 
 $searchButton = $ "#search-btn"
 $searchBox = $ "#search-box"
-$searchDiv = $ ".search"
+$searchDiv = $ "#search-cont"
 $rando = $ "#rando"
 
-setRandoWidth = () ->
-  searchDivWidth = $searchDiv.width()
-  $rando.width(searchDivWidth)
+# FUNCTIONS
+
+# setRandoWidth = () ->
+#   searchDivWidth = $searchDiv.width()
+#   console.log("SearchDiv is " + $searchDiv.width())
+#   $rando.width(searchDivWidth)
 
 $ ->
-  setRandoWidth()
+  # setRandoWidth()

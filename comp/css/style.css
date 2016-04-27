@@ -3,19 +3,20 @@
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
-/* line 19, ../../src/sass/style.sass */
+/* line 20, ../../src/sass/style.sass */
 html {
   height: 100%;
 }
 
-/* line 22, ../../src/sass/style.sass */
+/* line 23, ../../src/sass/style.sass */
 body {
   height: inherit;
 }
 
-/* line 25, ../../src/sass/style.sass */
+/* line 26, ../../src/sass/style.sass */
 .container {
   margin: 0 auto;
   text-align: center;
@@ -24,29 +25,44 @@ body {
   transform: translateY(-50%);
 }
 
-/* line 32, ../../src/sass/style.sass */
+/* line 33, ../../src/sass/style.sass */
 .mid-container {
   max-width: 500px;
   margin: 0 auto;
 }
 
-/* line 36, ../../src/sass/style.sass */
+/* line 37, ../../src/sass/style.sass */
 p {
   font-family: "Raleway", sans-serif;
 }
 
-/* line 41, ../../src/sass/style.sass */
+/* line 42, ../../src/sass/style.sass */
 .topper {
   padding-bottom: 30px;
 }
 
-/* line 44, ../../src/sass/style.sass */
+/* line 45, ../../src/sass/style.sass */
 h1 {
   font-family: "Asap", sans-serif;
   font-size: 48px;
 }
 
-/* line 48, ../../src/sass/style.sass */
+/* line 49, ../../src/sass/style.sass */
 h3 {
   font-family: "Raleway", sans-serif;
+}
+
+/* line 54, ../../src/sass/style.sass */
+#search-box {
+  width: 200px;
+}
+
+/* line 57, ../../src/sass/style.sass */
+#search-btn {
+  width: 110px;
+}
+
+/* line 60, ../../src/sass/style.sass */
+#rando {
+  width: 314px;
 }
