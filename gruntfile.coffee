@@ -29,9 +29,13 @@ module.exports = (grunt) ->
         files:
           'dist/js/script.min.js': 'comp/js/script.js'
     copy:
-      main:
+      index:
         expand: true,
-        src: '**/*',
+        src: 'index.html',
+        dest: '../../../../../../../xampp/htdocs/minipedia'
+      dist:
+        expand: true,
+        src: 'dist/*/*',
         dest: '../../../../../../../xampp/htdocs/minipedia'
 
   gruntTasks = ['grunt-contrib-coffee', 'grunt-contrib-jshint', \
