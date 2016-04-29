@@ -6,13 +6,14 @@ $searchButton = $ "#search-btn"
 $searchBox = $ "#search-box"
 $searchDiv = $ "#search-cont"
 $rando = $ "#rando"
+$wikiWindow = $ "#wiki-window"
 
 # FUNCTIONS
 
-# setRandoWidth = () ->
-#   searchDivWidth = $searchDiv.width()
-#   console.log("SearchDiv is " + $searchDiv.width())
-#   $rando.width(searchDivWidth)
+loadWiki = (url) ->
+  $wikiWindow.html "<object data: \'#{url}\' />"
 
-$ ->
-  # setRandoWidth()
+$rando.click ->
+  loadWiki "https://en.wikipedia.org/wiki/Special:Random"
+
+# DOCUMENT READY
