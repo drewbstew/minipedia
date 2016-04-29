@@ -1,5 +1,5 @@
 (function() {
-  var $rando, $searchBox, $searchButton, $searchDiv;
+  var $rando, $searchBox, $searchButton, $searchDiv, $wikiWindow, loadWiki;
 
   $searchButton = $("#search-btn");
 
@@ -9,6 +9,14 @@
 
   $rando = $("#rando");
 
-  $(function() {});
+  $wikiWindow = $("#wiki-window");
+
+  loadWiki = function(url) {
+    return $wikiWindow.html("<object data: \'" + url + "\' />");
+  };
+
+  $rando.click(function() {
+    return loadWiki("https://en.wikipedia.org/wiki/Special:Random");
+  });
 
 }).call(this);
