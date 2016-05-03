@@ -6,6 +6,7 @@ Tryin' some wacky shit this time and coding in Coffee-script and SaSS, then comp
 * SaSS / Compass
 * Coffeescript
 * Grunt (and thus: JSHint, Uglify, MinCSS, Coffee compiler, SaSS compiler, etc.)
+* AngularJS
 
 ...so, yeah, this could turn into a bug fucking disaster.
 (leaving that in)
@@ -17,3 +18,5 @@ Planned Features:
 Hopeful Features:
 * Open Wikipedia pages within minipedia page/div and apply custom styling to wiki css
 * Learning / imitating the search bar animation from the CodePen example
+
+Latest Edit: Also apparently Angular now. I took a break from this and may fuck off with it in the future, but we'll see what becomes of it.  

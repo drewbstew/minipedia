@@ -1,16 +1,17 @@
 <!-- Code by DrewBStew -->
 <!DOCTYPE html>
-<html>
+<html ng-app="wiki">
 <header>
   <title>minipedia: do less with less.</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="dist/css/style.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link href='https://fonts.googleapis.com/css?family=Asap|Raleway' rel='stylesheet' type='text/css'>
 </header>
-<body>
+<body ng-controller="wikiController as wiki">
   <div class="container">
     <div class="mid-container">
       <div class="topper">
@@ -26,7 +27,8 @@
           <a id="rando" href="https://en.wikipedia.org/wiki/Special:Random" target="viewer">rando commando</button>
         </div>
       </div>
-      <div id="wiki-window">
+      <div id="wiki-window" ng-show="wiki.chosen">
+        {{wiki.article}} #this is fake and probably won't even look like this
       </div>
     </div>
   </div>
