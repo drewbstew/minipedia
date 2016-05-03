@@ -19,4 +19,4 @@ Hopeful Features:
 * Open Wikipedia pages within minipedia page/div and apply custom styling to wiki css
 * Learning / imitating the search bar animation from the CodePen example
 
-Latest Edit: Also apparently Angular now. I took a break from this and may fuck off with it in the future, but we'll see what becomes of it.  
+Latest Edit: Looks like the Wikipedia viewer idea I wanted to do isn't as simple as planned, given the wikipedia API. Bummer. May look for an unofficial API, or just scrap that feature.
