@@ -4,6 +4,7 @@
 
 results;
 wikiUrl;
+searchMade;
 
 # SELECTORS
 
@@ -17,7 +18,7 @@ $wikiWindow = $ "#wiki-window"
 
 app = angular.module 'wiki', []
 
-app.controller 'wikiController',  () ->
+app.controller 'wikiController', () ->
   this.search = results;
 
 # AJAX
@@ -33,7 +34,7 @@ getSearchResults = () ->
 
 # LOGIC
 
-searchMade = (input) ->
+checkSearchMade = (input) ->
   return input
 
 # FUNCTIONS
@@ -42,8 +43,8 @@ getWikiUrl = (search) ->
   wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
   search.toString()
 
-$rando.click ->
-  loadWiki "https://en.wikipedia.org/wiki/Special:Random"
+$searchButton.click ->
+  
 
 # DOCUMENT READY
 
