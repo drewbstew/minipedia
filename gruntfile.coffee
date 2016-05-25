@@ -40,9 +40,8 @@ module.exports = (grunt) ->
     #     dest: '../../../../../../../xampp/htdocs/minipedia'
 
   gruntTasks = ['grunt-contrib-coffee', 'grunt-contrib-jshint', \
-  'grunt-contrib-uglify', 'grunt-contrib-compass', 'grunt-contrib-cssmin', \
-  'grunt-contrib-copy']
+  'grunt-contrib-uglify', 'grunt-contrib-compass', 'grunt-contrib-cssmin']
 
   grunt.loadNpmTasks(task) for task in gruntTasks
   grunt.registerTask 'default', ['coffee', 'jshint', 'uglify', 'compass', \
-  'cssmin', 'copy']
+  'cssmin']

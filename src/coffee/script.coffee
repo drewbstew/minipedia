@@ -2,7 +2,6 @@
 
 # GLOBAL VARIABLES
 
-results;
 wikiUrl;
 searchMade;
 
@@ -19,7 +18,11 @@ $wikiWindow = $ "#wiki-window"
 app = angular.module 'wiki', []
 
 app.controller 'wikiController', () ->
-  this.search = results;
+  this.results = {}
+
+  this.search.input = (input) ->
+    wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
+    input.toString()
 
 # AJAX
 
@@ -27,24 +30,23 @@ getSearchResults = () ->
   $.ajax({
     type: 'GET',
     dataType: 'json',
-    url: getWikiUrl,
+    url: wikiURL,
     success: (info) ->
       results = JSON.parse(info)
     })
 
+
 # LOGIC
 
 checkSearchMade = (input) ->
-  return input
+  searchMade = true if input
 
 # FUNCTIONS
 
-getWikiUrl = (search) ->
-  wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-  search.toString()
-
 $searchButton.click ->
-  
+  getSearchResults()
+
+
 
 # DOCUMENT READY
 

@@ -13,15 +13,15 @@
 </header>
 <body ng-controller="wikiController as wiki">
   <div class="container">
-    <div class="mid-container">
+    <div class="mid-container"
       <div class="topper">
         <h1>minipedia</h1>
         <h3>do less with less.</h3>
       </div>
-      <div class="interface">
+      <div class="interface" ng-model="wiki.search">
         <div class="search row" id="search-cont">
-          <input type="text" id="search-box">
-          <button id="search-btn">search wikipedia</button>
+          <input type="text" id="search-box" ng-model="wiki.search.input">
+          <button id="search-btn" ng-model="wiki.search.button">search wikipedia</button>
         </div>
         <div class="search row">
           <a id="rando" href="https://en.wikipedia.org/wiki/Special:Random">rando commando</a>
@@ -30,7 +30,8 @@
       <div id="wiki-search-results" ng-show="searchMade">
         <!-- this is fake and should never show up -->
         <ul>
-          <li ng-repeat="result in search.results[1]"></li>
+          <li ng-repeat=""></li>
+        </ul>
       </div>
     </div>
   </div>

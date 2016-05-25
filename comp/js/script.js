@@ -1,5 +1,7 @@
 (function() {
-  var $rando, $searchBox, $searchButton, $searchDiv, $wikiWindow, loadWiki;
+  wikiUrl;
+  searchMade;
+  var $rando, $searchBox, $searchButton, $searchDiv, $wikiWindow, app, checkSearchMade, getSearchResults;
 
   $searchButton = $("#search-btn");
 
@@ -11,12 +13,39 @@
 
   $wikiWindow = $("#wiki-window");
 
-  loadWiki = function(url) {
-    return $wikiWindow.html("<object data: \'" + url + "\' />");
+  app = angular.module('wiki', []);
+
+  app.controller('wikiController', function() {
+    this.results = {};
+    return this.search.input = function(input) {
+      var wikiUrl;
+      return wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + input.toString();
+    };
+  });
+
+  getSearchResults = function() {
+    return $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: wikiURL,
+      success: function(info) {
+        var results;
+        return results = JSON.parse(info);
+      }
+    });
   };
 
-  $rando.click(function() {
-    return loadWiki("https://en.wikipedia.org/wiki/Special:Random");
+  checkSearchMade = function(input) {
+    var searchMade;
+    if (input) {
+      return searchMade = true;
+    }
+  };
+
+  $searchButton.click(function() {
+    return getSearchResults();
   });
+
+  $(function() {});
 
 }).call(this);
