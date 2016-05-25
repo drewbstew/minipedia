@@ -11,17 +11,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link href='https://fonts.googleapis.com/css?family=Asap|Raleway' rel='stylesheet' type='text/css'>
 </header>
-<body ng-controller="wikiController as wiki">
+<body>
   <div class="container">
     <div class="mid-container"
       <div class="topper">
         <h1>minipedia</h1>
         <h3>do less with less.</h3>
       </div>
-      <div class="interface" ng-model="wiki.search">
-        <div class="search row" id="search-cont">
-          <input type="text" id="search-box" ng-model="wiki.search.input">
-          <button id="search-btn" ng-model="wiki.search.button">search wikipedia</button>
+      <div class="interface">
+        <div class="search row" id="search-cont" ng-controller="SearchCtrl as wiki">
+          <input type="text" id="search-box">
+          <button id="search-btn">search wikipedia</button>
         </div>
         <div class="search row">
           <a id="rando" href="https://en.wikipedia.org/wiki/Special:Random">rando commando</a>

@@ -2,8 +2,8 @@
 
 # GLOBAL VARIABLES
 
-wikiUrl;
-searchMade;
+wikiUrl
+searchMade
 
 # SELECTORS
 
@@ -17,10 +17,10 @@ $wikiWindow = $ "#wiki-window"
 
 app = angular.module 'wiki', []
 
-app.controller 'wikiController', () ->
+app.controller 'SearchCtrl', () ->
   this.results = {}
 
-  this.search.input = (input) ->
+  this.setUrl = (input) ->
     wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
     input.toString()
 
@@ -44,6 +44,7 @@ checkSearchMade = (input) ->
 # FUNCTIONS
 
 $searchButton.click ->
+  wiki.search()
   getSearchResults()
 
 
