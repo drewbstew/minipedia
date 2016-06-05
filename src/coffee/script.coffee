@@ -13,17 +13,6 @@ $searchDiv = $ "#search-cont"
 $rando = $ "#rando"
 $wikiWindow = $ "#wiki-window"
 
-#ANGULAR
-
-app = angular.module 'wiki', []
-
-app.controller 'wikiController', () ->
-  this.results = {}
-
-  this.search.input = (input) ->
-    wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-    input.toString()
-
 # AJAX
 
 getSearchResults = () ->
@@ -45,8 +34,6 @@ checkSearchMade = (input) ->
 
 $searchButton.click ->
   getSearchResults()
-
-
 
 # DOCUMENT READY
 
