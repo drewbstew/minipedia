@@ -1,11 +1,11 @@
 # Code by DrewBStew
 
-# GLOBAL VARIABLES
+
 
 # SELECTORS
 
 $searchButton = $ "#search-btn"
-$searchInput = $("#search-input").val()
+$searchInput = $("#search-input")
 $searchDiv = $ "#search-cont"
 $rando = $ "#rando"
 $wikiWindow = $ "#wiki-window"
@@ -31,13 +31,10 @@ checkSearchMade = (input) ->
 
 
 setWikiUrl = () ->
-  "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent($searchInput).toString() + "&utf8="
+  input = $searchInput.val()
+  "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8="
 
 $searchButton.click ->
   setWikiUrl()
   getSearchResults()
   $searchInput = ""
-
-# DOCUMENT READY
-
-$ ->

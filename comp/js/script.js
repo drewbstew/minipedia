@@ -3,7 +3,7 @@
 
   $searchButton = $("#search-btn");
 
-  $searchInput = $("#search-input").val();
+  $searchInput = $("#search-input");
 
   $searchDiv = $("#search-cont");
 
@@ -31,7 +31,9 @@
   };
 
   setWikiUrl = function() {
-    return "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent($searchInput).toString() + "&utf8=";
+    var input;
+    input = $searchInput.val();
+    return "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8=";
   };
 
   $searchButton.click(function() {
@@ -39,7 +41,5 @@
     getSearchResults();
     return $searchInput = "";
   });
-
-  $(function() {});
 
 }).call(this);
