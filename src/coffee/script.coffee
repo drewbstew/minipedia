@@ -1,7 +1,5 @@
 # Code by DrewBStew
 
-
-
 # SELECTORS
 
 $searchButton = $ "#search-btn"
@@ -28,7 +26,6 @@ checkSearchMade = (input) ->
   searchMade = true if $searchInput
 
 # FUNCTIONS
-
 
 setWikiUrl = () ->
   input = $searchInput.val()
