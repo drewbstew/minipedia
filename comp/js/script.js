@@ -1,11 +1,9 @@
 (function() {
-  wikiUrl;
-  searchMade;
-  var $rando, $searchBox, $searchButton, $searchDiv, $wikiWindow, app, checkSearchMade, getSearchResults;
+  var $rando, $searchButton, $searchDiv, $searchInput, $wikiWindow, checkSearchMade, getSearchResults, setWikiUrl;
 
   $searchButton = $("#search-btn");
 
-  $searchBox = $("#search-box");
+  $searchInput = $("#search-input").val();
 
   $searchDiv = $("#search-cont");
 
@@ -13,21 +11,11 @@
 
   $wikiWindow = $("#wiki-window");
 
-  app = angular.module('wiki', []);
-
-  app.controller('wikiController', function() {
-    this.results = {};
-    return this.search.input = function(input) {
-      var wikiUrl;
-      return wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + input.toString();
-    };
-  });
-
   getSearchResults = function() {
     return $.ajax({
       type: 'GET',
       dataType: 'json',
-      url: wikiURL,
+      url: setWikiUrl(),
       success: function(info) {
         var results;
         return results = JSON.parse(info);
@@ -37,13 +25,19 @@
 
   checkSearchMade = function(input) {
     var searchMade;
-    if (input) {
+    if ($searchInput) {
       return searchMade = true;
     }
   };
 
+  setWikiUrl = function() {
+    return "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent($searchInput).toString() + "&utf8=";
+  };
+
   $searchButton.click(function() {
-    return getSearchResults();
+    setWikiUrl();
+    getSearchResults();
+    return $searchInput = "";
   });
 
   $(function() {});
