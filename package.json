@@ -14,7 +14,6 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-coffee": "^1.0.0",
-    "grunt-contrib-compass": "^1.1.1",
     "jshint-stylish": "^2.1.0"
   },
   "scripts": {

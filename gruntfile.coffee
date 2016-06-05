@@ -11,11 +11,10 @@ module.exports = (grunt) ->
         files: [
           'comp/js/script.js': 'src/coffee/script.coffee'
         ]
-    compass:
-      dev:
-        options:
-          sassDir: 'src/sass',
-          cssDir: 'comp/css'
+    sass:
+      dist:
+        files:
+          'comp/css/style.css': 'src/sass/style.sass'
     cssmin:
       options:
         banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd")' +
@@ -40,8 +39,8 @@ module.exports = (grunt) ->
     #     dest: '../../../../../../../xampp/htdocs/minipedia'
 
   gruntTasks = ['grunt-contrib-coffee', 'grunt-contrib-jshint', \
-  'grunt-contrib-uglify', 'grunt-contrib-compass', 'grunt-contrib-cssmin']
+  'grunt-contrib-uglify', 'grunt-contrib-sass', 'grunt-contrib-cssmin']
 
   grunt.loadNpmTasks(task) for task in gruntTasks
-  grunt.registerTask 'default', ['coffee', 'jshint', 'uglify', 'compass', \
+  grunt.registerTask 'default', ['coffee', 'jshint', 'uglify', 'sass', \
   'cssmin']
