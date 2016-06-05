@@ -8,7 +8,7 @@ searchMade;
 # SELECTORS
 
 $searchButton = $ "#search-btn"
-$searchBox = $ "#search-box"
+$searchInput = $ "#search-input"
 $searchDiv = $ "#search-cont"
 $rando = $ "#rando"
 $wikiWindow = $ "#wiki-window"
