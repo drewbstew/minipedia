@@ -29,7 +29,7 @@ getSearchResults = () ->
       withCredentials: true
     crossDomain: true
     type: 'GET',
-    dataType: 'json',
+    dataType: 'jsonp',
     headers:
       'Api-User-Agent': 'Example/1.0'
     url: wikiUrl,
