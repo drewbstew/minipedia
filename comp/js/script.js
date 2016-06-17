@@ -58,7 +58,7 @@
   setWikiUrl = function() {
     var input;
     input = $searchInput.val();
-    return "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8=";
+    return "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8=&callback=?";
   };
 
   $searchButton.click(function() {

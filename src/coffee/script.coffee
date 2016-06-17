@@ -47,7 +47,7 @@ checkSearchMade = (input) ->
 
 setWikiUrl = () ->
   input = $searchInput.val()
-  "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8="
+  "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + encodeURIComponent(input) + "&utf8=&callback=?"
 
 $searchButton.click ->
   setWikiUrl()
