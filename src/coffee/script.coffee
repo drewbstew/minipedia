@@ -8,13 +8,29 @@ $searchDiv = $ "#search-cont"
 $rando = $ "#rando"
 $wikiWindow = $ "#wiki-window"
 
-# AJAX
+# AJAX & CORS
+
+createCORSRequest = () ->
+  url = setWikiUrl()
+  method = 'GET'
+  xhr = new XMLHttpRequest();
+  if "withCredentials" in xhr
+    xhr.open(method, url, true);
+  else if typeof XDomainRequest != "undefined"
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  else
+    xhr = null;
 
 getSearchResults = () ->
+  wikiUrl = setWikiUrl()
   $.ajax({
+    xhrFields:
+      withCredentials: true
+    crossDomain: true
     type: 'GET',
     dataType: 'json',
-    url: setWikiUrl(),
+    url: wikiUrl,
     success: (info) ->
       results = JSON.parse(info)
     })
