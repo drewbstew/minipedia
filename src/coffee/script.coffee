@@ -10,17 +10,17 @@ $wikiWindow = $ "#wiki-window"
 
 # AJAX & CORS
 
-createCORSRequest = () ->
-  url = setWikiUrl()
-  method = 'GET'
-  xhr = new XMLHttpRequest();
-  if "withCredentials" in xhr
-    xhr.open(method, url, true);
-  else if typeof XDomainRequest != "undefined"
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  else
-    xhr = null;
+# createCORSRequest = () ->
+#   url = setWikiUrl()
+#   method = 'GET'
+#   xhr = new XMLHttpRequest();
+#   if "withCredentials" in xhr
+#     xhr.open(method, url, true);
+#   else if typeof XDomainRequest != "undefined"
+#     xhr = new XDomainRequest();
+#     xhr.open(method, url);
+#   else
+#     xhr = null;
 
 getSearchResults = () ->
   wikiUrl = setWikiUrl()

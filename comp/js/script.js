@@ -1,6 +1,5 @@
 (function() {
-  var $rando, $searchButton, $searchDiv, $searchInput, $wikiWindow, checkSearchMade, createCORSRequest, getSearchResults, setWikiUrl,
-    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var $rando, $searchButton, $searchDiv, $searchInput, $wikiWindow, checkSearchMade, getSearchResults, setWikiUrl;
 
   $searchButton = $("#search-btn");
 
@@ -11,21 +10,6 @@
   $rando = $("#rando");
 
   $wikiWindow = $("#wiki-window");
-
-  createCORSRequest = function() {
-    var method, url, xhr;
-    url = setWikiUrl();
-    method = 'GET';
-    xhr = new XMLHttpRequest();
-    if (indexOf.call(xhr, "withCredentials") >= 0) {
-      return xhr.open(method, url, true);
-    } else if (typeof XDomainRequest !== "undefined") {
-      xhr = new XDomainRequest();
-      return xhr.open(method, url);
-    } else {
-      return xhr = null;
-    }
-  };
 
   getSearchResults = function() {
     var wikiUrl;
