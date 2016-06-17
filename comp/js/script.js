@@ -37,6 +37,9 @@
       crossDomain: true,
       type: 'GET',
       dataType: 'json',
+      headers: {
+        'Api-User-Agent': 'Example/1.0'
+      },
       url: wikiUrl,
       success: function(info) {
         var results;
