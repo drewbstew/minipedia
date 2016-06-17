@@ -36,7 +36,7 @@
       },
       crossDomain: true,
       type: 'GET',
-      dataType: 'json',
+      dataType: 'jsonp',
       url: wikiUrl,
       success: function(info) {
         var results;
